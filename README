@@ -1,5 +1,6 @@
-js - for javascript files
+js - for javascript files, holds only functions to be run by the main page
 db - for databases
 img - for images
 css - for css files
 deprecated - used to populate the database
+index.php - main website that you first visit
