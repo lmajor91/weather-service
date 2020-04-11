@@ -1,0 +1,70 @@
+/* variables */
+:root{
+    --min-box-height: 330px;
+}
+/* tag styles */
+
+/* NOTE!!
+* float, display: inline-block, display: table-cell, vertical-align and column-* properties have no effect on a grid item.
+**/
+
+/* class styles */
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-image: url("../img/clouds.jpeg");
+}
+
+.content_container{
+    background: red;
+    width: 86%;
+    height: 500px; /* container height */
+    border: 5px solid blue;
+    margin: 10px;
+
+    word-wrap: break-word;
+    font-size: 16px;
+    font-family: serif;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 1fr is written 4 times which corresponds to the number of columns*/
+    grid-auto-rows: fit-content(100%); /* the rows a set to size according to the content inside of them */
+    grid-template-areas: 
+        "weather . . ."
+        "winds visibility temperature feelslike"
+    ;
+}
+
+.content_container div{
+    background: yellow;
+    min-height: var(--min-box-height);
+    margin: 5px;
+}
+
+/* id styles */
+/* start row / start column / span rows / span columns*/
+#weather {
+    grid-area: 1 / 1 / span 1 / span end;
+    min-height: 150px;
+}
+
+#winds {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+#visibility {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#temperature {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#feelsliketemp {
+    grid-area: 2 / 4 / span 1 / span 1;
+}

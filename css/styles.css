@@ -1,0 +1,46 @@
+/* defaults */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* variables */
+
+/* tag styles */
+body {
+    background: #f5f5f5;
+}
+
+/* class styles */
+
+.userform{
+    background: #292c3b;
+    height: 40px;
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.userform div{
+    align-self: center;
+}
+
+.userform div select{
+    padding: 5px;
+    margin-left: 10px;
+    align-self: center;
+    width: auto;
+}
+
+/* id styles */
+
+#weatherAPIButton {
+    padding: 2px;
+    height: auto;
+    font: serif;
+    margin-left: 5px; /* offset */
+    align-self: center;
+}
