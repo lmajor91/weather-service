@@ -26,16 +26,19 @@
 
 .footer_text{
     height: 100%;
-    display: table;
-    float: left;
+    display: flex;
+    align-items: center;
     background: var(--footer-edit-color);
-    font: arial;
-    font-weight: 32;
 }
 
-.footer_text h2{
+.footer_text a h2{
     height: 100%;
+    font-size: 1.4em;
+    font-family: "Times New Roman", Times, serif;
     color: white;
-    display: table-cell;
-    vertical-align: middle;
+}
+
+.footer_text a:hover {
+    text-decoration: underline;
+    color: antiquewhite;
 }

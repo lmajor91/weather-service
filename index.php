@@ -56,7 +56,7 @@
     <section class="header">
         <header class="inner_header">
             <div class="header_text">
-                <h2>testing header</h2>
+                <h2>Weather Service</h2>
             </div>
         </header>
     </section>
@@ -77,14 +77,17 @@
         </div>
     </section>
 
+    <!-- Website Content -->
     <section class="wrapper">
-        <!-- Website Content -->
-        <section class="content_container">
-            <div id="weather">weather</div>
-            <div id="wind">winds</div>
-            <div id="visibility">visibility</div>
-            <div id="temperature">temperature</div>
-            <div id="feelsliketemp">feels like</div>
+        <section class="content_container" style="display: none;">
+            <div id="weather"><h3>weather</h3></div>
+            <div id="wind"><h3>winds</h3></div>
+            <div id="visibility"><h3>visibility</h3></div>
+            <div id="temperature"><h3>temperature</h3></div>
+            <div id="feelsliketemp"><h3>feels like</h3></div>
+        </section>
+        <section class="content_placeholder">
+            <div id="placeholder_text"><h1>Select a country</h1></div>
         </section>
     </section>
 
@@ -92,7 +95,7 @@
     <section class="footer">
         <footer class="inner_footer">
             <div class="footer_text">
-                <h2>testing footer</h2>
+                <a href="https://github.com/liamm91/weatherservice"><h2>Go to the repo!</h2></a>
             </div>
         </footer>
     </section>

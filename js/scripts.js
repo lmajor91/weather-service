@@ -89,22 +89,33 @@ export function getWeatherFromAPI(){
         // if the apicall returned anything
         if (data){
             var json = JSON.parse(data);
-            //console.log(json);
             $("#output").html(data);
 
-            $("#weather").html(json.weather[0].main);
-            $("#wind").html("Winds speed\n"+json.wind["speed"]+"km");
-            $("#temperature").html(json.main["temp"]+"°C");
-            $("#feelsliketemp").html("Feels like\n"+json.main["feels_like"]+"°C");
+            $("#weather").html(h3wrapper(capitalizeFirstLetter(json.weather[0].description)));
+            $("#wind").html(h3wrapper("Winds speed: "+json.wind["speed"]+"km"));
+            $("#temperature").html(h3wrapper("Temperature is: "+json.main["temp"]+"°C"));
+            $("#feelsliketemp").html(h3wrapper("Feels like: "+json.main["feels_like"]+"°C"));
             if(json.visibility){
-                $("#visibility").html("Visibility\n"+json.visibility+"km");
+                $("#visibility").html(h3wrapper("Visibility: "+json.visibility+"km"));
             } else {
-                $("#visibility").empty();
+                $("#visibility").html(h3wrapper("Far"));
             }
+
+            // once all the data has been updated to the screen, it will show it
+            $(".content_container").css("display", "grid");
+            $(".content_placeholder").remove();
             
             $("#title").html("Weather in " + json.sys.country + ", " + json.name)
         } else {
             $("#weather").html("Check your internet connection! No data received.");
         }
     });
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function h3wrapper(str){
+    return "<h3>" + str + "</h3>"
 }
