@@ -112,6 +112,7 @@ export function getWeatherFromAPI(){
     });
 }
 
+// simple functions only used in this module
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }

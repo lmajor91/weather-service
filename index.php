@@ -46,9 +46,8 @@
     <meta name="description" content="Finds the weather at a specified area">
 
     <!-- stylesheets include -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/headerfooter.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 </head>
 
