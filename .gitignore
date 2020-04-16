@@ -1,0 +1,6 @@
+# folders
+deprecated/
+
+# files
+*.txt
+sample output.json
